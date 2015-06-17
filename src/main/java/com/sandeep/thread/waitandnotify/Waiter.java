@@ -7,7 +7,7 @@ package com.sandeep.thread.waitandnotify;
  * @author sandeept
  *
  */
-public class Waiter  implements Runnable{
+public class Waiter implements Runnable{
     
    private Message msg;
     
