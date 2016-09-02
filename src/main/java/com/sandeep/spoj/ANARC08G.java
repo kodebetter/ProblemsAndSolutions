@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class ANARC08G {
 
-	public static int[][] readFromConsole() {
+	public static void main(String[] args) {
 
-		int matrix[][];
+		int input[][];
 		int row, column;
 
 		Scanner scan = new Scanner(System.in);
@@ -15,28 +15,21 @@ public class ANARC08G {
 
 		System.out.println("\nEnter number of rows :");
 		row = Integer.parseInt(scan.nextLine());
+		column = row;
 
-		System.out.println("Enter number of columns :");
-		column = Integer.parseInt(scan.nextLine());
-
-		matrix = new int[row][column];
+		input = new int[row][column];
 		System.out.println("Enter the data :");
 
 		for (int i = 0; i < row; i++) {
 
 			for (int j = 0; j < column; j++) {
 
-				matrix[i][j] = scan.nextInt();
+				input[i][j] = scan.nextInt();
 			}
 		}
-		return matrix;
-	}
-
-	public static void main(String[] args) {
-
-		int[][] input = readFromConsole();
-		int[] creaditArray = new int[4];
-		int[] debitArray = new int[4];
+		
+		int[] creaditArray = new int[row];
+		int[] debitArray = new int[row];
 		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < 4; j++) {
 				creaditArray[i] = creaditArray[i] + input[i][j];
