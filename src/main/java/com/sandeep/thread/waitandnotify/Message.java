@@ -9,11 +9,13 @@ package com.sandeep.thread.waitandnotify;
  */
 public class Message{
     private String msg;
-     
-    public Message(String str){
-        this.msg=str;
+    private boolean shouldProceed;
+
+    public Message(String msg, boolean shouldProceed) {
+        this.msg = msg;
+        this.shouldProceed = shouldProceed;
     }
- 
+
     public String getMessage() {
         return msg;
     }
@@ -21,5 +23,12 @@ public class Message{
     public void setMessage(String str) {
         this.msg=str;
     }
- 
+
+    public boolean isShouldProceed() {
+        return shouldProceed;
+    }
+
+    public void setShouldProceed(boolean shouldProceed) {
+        this.shouldProceed = shouldProceed;
+    }
 }

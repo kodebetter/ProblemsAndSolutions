@@ -3,7 +3,7 @@ package com.sandeep.thread.waitandnotify;
 public class WaitNotifyTest {
 
 	public static void main(String[] args) {
-        Message msg = new Message("process it");
+        Message msg = new Message("process it", true);
         Waiter waiter = new Waiter(msg);
         new Thread(waiter,"waiter").start();
          
