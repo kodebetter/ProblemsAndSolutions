@@ -6,6 +6,12 @@ public class Report {
     private String studentNumber;
     private String school;
 
+    public Report(String reportKey, String studentNumber, String school) {
+        this.reportKey = reportKey;
+        this.studentNumber = studentNumber;
+        this.school = school;
+    }
+
     public String getReportKey() {
         return reportKey;
     }
