@@ -6,8 +6,6 @@ public class LongestContigiousNonRepeatedSequence {
         String input = "AABBCEEDF";
         String output = "ABE";
         findLongesRepeatingSubsequence(input);
-        longestRepeatedSubSeq(input);
-
 
     }
 
