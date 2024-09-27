@@ -1,5 +1,5 @@
 package com.sandeep.thread.waitandnotify;
-
+import java.lang.*;
 public class Print2 implements Runnable {
 
     Message message;

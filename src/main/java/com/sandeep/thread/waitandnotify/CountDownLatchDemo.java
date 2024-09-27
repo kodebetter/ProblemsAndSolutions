@@ -9,7 +9,7 @@ public class CountDownLatchDemo {
 
     public static void main(String[] args) {
 
-        final CountDownLatch latch = new CountDownLatch(3);
+        final CountDownLatch latch = new CountDownLatch(4);
         Thread cacheService = new Thread(new Service("CacheService", 1000, latch));
         Thread alertService = new Thread(new Service("AlertService", 1000, latch));
         Thread validationService = new Thread(new Service("ValidationService", 1000, latch));
@@ -17,14 +17,13 @@ public class CountDownLatchDemo {
         cacheService.start();
         alertService.start();
         validationService.start();
-        validationService.start();
+        //validationService.start();
         try {
             latch.await();
 
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
 
     }
 }

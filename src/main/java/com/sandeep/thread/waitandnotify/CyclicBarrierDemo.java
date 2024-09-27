@@ -42,7 +42,6 @@ public class CyclicBarrierDemo {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-
             }
         });
 
@@ -57,6 +56,7 @@ public class CyclicBarrierDemo {
         t1.start();
         t2.start();
         t3.start();
+       // t3.start();
 
     }
 }
